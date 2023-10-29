@@ -15,25 +15,25 @@ const page = () => {
   const [amount10, setAmount10] = useState(0);
 
   // 1,000
-  const [a, setA] = useState(0);
+  const [a, setA] = useState("");
   // 500
-  const [b, setB] = useState(0);
+  const [b, setB] = useState("");
   // 200
-  const [c, setC] = useState(0);
+  const [c, setC] = useState("");
   // 100
-  const [d, setD] = useState(0);
+  const [d, setD] = useState("");
   // 50
-  const [ee, setE] = useState(0);
+  const [ee, setE] = useState("");
   // 20
-  const [f, setF] = useState(0);
+  const [f, setF] = useState("");
   // 20 coins
-  const [g, setG] = useState(0);
+  const [g, setG] = useState("");
   // 10 coins
-  const [h, setH] = useState(0);
+  const [h, setH] = useState("");
   // 5 coins
-  const [i, setI] = useState(0);
+  const [i, setI] = useState("");
   // 1 coins
-  const [j, setJ] = useState(0);
+  const [j, setJ] = useState("");
 
   // CASH
   const cash1 = useRef();
