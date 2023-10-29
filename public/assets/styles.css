@@ -51,6 +51,31 @@
   display: none;
 }
 
+button {
+  float: right;
+}
+
+.btn_save {
+  border: none;
+  background: #0b5ed7;
+  color: #f5f5f5;
+  width: 100%;
+  max-width: 150px;
+  margin-right: 1rem;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+
+.btn_clear {
+  border: none;
+  background: #5c636a;
+  color: #f5f5f5;
+  width: 100%;
+  max-width: 100px;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+
 @media screen and (max-width: 400px) {
   table thead tr {
     display: none;

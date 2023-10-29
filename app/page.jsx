@@ -1,8 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const page = () => {
   const [sum, setSum] = useState(0);
+  const [data, setData] = useState([]);
   const [amount1, setAmount1] = useState(0);
   const [amount2, setAmount2] = useState(0);
   const [amount3, setAmount3] = useState(0);
@@ -78,9 +81,104 @@ const page = () => {
     setSum(totalSum);
   };
 
+  const handleSave = () => {
+    setData(
+      localStorage.setItem("p1", a),
+      localStorage.setItem("p2", b),
+      localStorage.setItem("p3", c),
+      localStorage.setItem("p4", d),
+      localStorage.setItem("p5", ee),
+      localStorage.setItem("p6", f),
+      localStorage.setItem("p7", g),
+      localStorage.setItem("p8", h),
+      localStorage.setItem("p9", i),
+      localStorage.setItem("p10", j),
+      localStorage.setItem("a1", amount1),
+      localStorage.setItem("a2", amount2),
+      localStorage.setItem("a3", amount3),
+      localStorage.setItem("a4", amount4),
+      localStorage.setItem("a5", amount5),
+      localStorage.setItem("a6", amount6),
+      localStorage.setItem("a7", amount7),
+      localStorage.setItem("a8", amount8),
+      localStorage.setItem("a9", amount9),
+      localStorage.setItem("a10", amount10),
+      localStorage.setItem("sum", sum)
+    );
+
+    toast.promise(
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      }),
+      {
+        pending: "Saving...",
+        success: "Data has been saved to localstorage!",
+        error: "Error",
+      }
+    );
+  };
+
+  const handleClear = () => {
+    localStorage.clear();
+    setA("");
+    setB("");
+    setC("");
+    setD("");
+    setE("");
+    setF("");
+    setG("");
+    setH("");
+    setI("");
+    setJ("");
+
+    toast.success("Data has been removed to localstorage!");
+  };
+
   useEffect(() => {
     handleCount();
-  }, [a, b, c, d, ee, f, g, h, i, j, sum]);
+
+    if (localStorage.getItem("p1")) {
+      setA(localStorage.getItem("p1"));
+    }
+
+    if (localStorage.getItem("p2")) {
+      setB(localStorage.getItem("p2"));
+    }
+
+    if (localStorage.getItem("p3")) {
+      setC(localStorage.getItem("p3"));
+    }
+
+    if (localStorage.getItem("p4")) {
+      setD(localStorage.getItem("p4"));
+    }
+
+    if (localStorage.getItem("p5")) {
+      setE(localStorage.getItem("p5"));
+    }
+
+    if (localStorage.getItem("p6")) {
+      setF(localStorage.getItem("p6"));
+    }
+
+    if (localStorage.getItem("p7")) {
+      setG(localStorage.getItem("p7"));
+    }
+
+    if (localStorage.getItem("p8")) {
+      setH(localStorage.getItem("p8"));
+    }
+
+    if (localStorage.getItem("p9")) {
+      setI(localStorage.getItem("p9"));
+    }
+
+    if (localStorage.getItem("p10")) {
+      setJ(localStorage.getItem("p10"));
+    }
+  }, [a, b, c, d, ee, f, g, h, i, j, sum, data]);
 
   return (
     <>
@@ -366,12 +464,23 @@ const page = () => {
                       </tbody>
                     </table>
                   </div>
+                  <button className="btn_clear" onClick={handleClear}>
+                    clear
+                  </button>
+                  <button className="btn_save" onClick={handleSave}>
+                    save
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <ToastContainer
+        position="top-right"
+        pauseOnFocusLoss={false}
+        style={{ width: "400px" }}
+      />
     </>
   );
 };
