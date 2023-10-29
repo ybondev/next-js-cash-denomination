@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.home_section .card {
+  width: 100%;
+}
+
 .home_section .card-title {
   text-transform: uppercase;
   font-weight: bold;
@@ -41,4 +45,28 @@
   right: 50%;
   transform: translate(-50%, -50%);
   color: darkgray;
+}
+
+.th_row {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  table thead tr {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+  }
+
+  table td {
+    text-align: right;
+    display: block;
+  }
+
+  table td::before {
+    content: attr(data-title) "";
+    float: left;
+  }
 }

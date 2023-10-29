@@ -90,22 +90,26 @@ const page = () => {
             <div className="col-md-8">
               <div className="card">
                 <div className="card-body">
-                  <div className="card-title">cash breakdown denomination</div>
+                  <div className="card-title">fv balete</div>
                   <div className="table-responsive">
                     <table className="table table-striped">
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Cash Denomination</th>
+                          <th scope="col" style={{ display: "none" }}>
+                            #
+                          </th>
+                          <th scope="col">Cash</th>
                           <th scope="col">Pieces</th>
                           <th scope="col">Amount</th>
-                          <th scope="col">total</th>
+                          <th scope="col">Total</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            1
+                          </th>
+                          <td data-title="Cash:">
                             <input
                               type="number"
                               value={1000}
@@ -113,7 +117,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -121,12 +125,16 @@ const page = () => {
                               onChange={(e) => setA(e.target.value)}
                             />
                           </td>
-                          <td>{amount1.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount1.toLocaleString()}
+                          </td>
                           <td> </td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            2
+                          </th>
+                          <td data-title="Cash:">
                             <input
                               type="number"
                               value={500}
@@ -134,7 +142,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -142,11 +150,15 @@ const page = () => {
                               onChange={(e) => setB(e.target.value)}
                             />
                           </td>
-                          <td>{amount2.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount2.toLocaleString()}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            3
+                          </th>
+                          <td data-title="Cash">
                             <input
                               type="number"
                               value={200}
@@ -154,7 +166,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -162,12 +174,16 @@ const page = () => {
                               onChange={(e) => setC(e.target.value)}
                             />
                           </td>
-                          <td>{amount3.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount3.toLocaleString()}
+                          </td>
                           <td> </td>
                         </tr>
                         <tr>
-                          <th scope="row">4</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            4
+                          </th>
+                          <td data-title="Cash:">
                             <input
                               type="number"
                               value={100}
@@ -175,7 +191,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -183,11 +199,15 @@ const page = () => {
                               onChange={(e) => setD(e.target.value)}
                             />
                           </td>
-                          <td>{amount4.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount4.toLocaleString()}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">5</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            5
+                          </th>
+                          <td data-title="Cash:">
                             <input
                               type="number"
                               value={50}
@@ -195,7 +215,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -203,12 +223,16 @@ const page = () => {
                               onChange={(e) => setE(e.target.value)}
                             />
                           </td>
-                          <td>{amount5.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount5.toLocaleString()}
+                          </td>
                           <td> </td>
                         </tr>
                         <tr>
-                          <th scope="row">6</th>
-                          <td>
+                          <th scope="row" className="th_row">
+                            6
+                          </th>
+                          <td data-title="Cash:">
                             <input
                               type="number"
                               value={20}
@@ -216,7 +240,7 @@ const page = () => {
                               disabled
                             />
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -224,11 +248,15 @@ const page = () => {
                               onChange={(e) => setF(e.target.value)}
                             />
                           </td>
-                          <td>{amount6.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount6.toLocaleString()}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">7</th>
-                          <td className="coins">
+                          <th scope="row" className="th_row">
+                            7
+                          </th>
+                          <td className="coins" data-title="Cash:">
                             <input
                               type="number"
                               value={20}
@@ -237,7 +265,7 @@ const page = () => {
                             />
                             <span>(coins)</span>
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -245,12 +273,16 @@ const page = () => {
                               onChange={(e) => setG(e.target.value)}
                             />
                           </td>
-                          <td>{amount7.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount7.toLocaleString()}
+                          </td>
                           <td> </td>
                         </tr>
                         <tr>
-                          <th scope="row">8</th>
-                          <td className="coins">
+                          <th scope="row" className="th_row">
+                            8
+                          </th>
+                          <td className="coins" data-title="Cash:">
                             <input
                               type="number"
                               value={10}
@@ -259,7 +291,7 @@ const page = () => {
                             />
                             <span>(coins)</span>
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -267,11 +299,15 @@ const page = () => {
                               onChange={(e) => setH(e.target.value)}
                             />
                           </td>
-                          <td>{amount8.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount8.toLocaleString()}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">9</th>
-                          <td className="coins">
+                          <th scope="row" className="th_row">
+                            9
+                          </th>
+                          <td className="coins" data-title="Cash:">
                             <input
                               type="number"
                               value={5}
@@ -280,7 +316,7 @@ const page = () => {
                             />
                             <span>(coins)</span>
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -288,12 +324,16 @@ const page = () => {
                               onChange={(e) => setI(e.target.value)}
                             />
                           </td>
-                          <td>{amount9.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount9.toLocaleString()}
+                          </td>
                           <td> </td>
                         </tr>
                         <tr>
-                          <th scope="row">10</th>
-                          <td className="coins">
+                          <th scope="row" className="th_row">
+                            10
+                          </th>
+                          <td className="coins" data-title="Cash:">
                             <input
                               type="number"
                               value={1}
@@ -302,7 +342,7 @@ const page = () => {
                             />
                             <span>(coins)</span>
                           </td>
-                          <td className="pieces">
+                          <td className="pieces" data-title="Pieces:">
                             <input
                               type="number"
                               className="fomr-control"
@@ -310,14 +350,18 @@ const page = () => {
                               onChange={(e) => setJ(e.target.value)}
                             />
                           </td>
-                          <td>{amount10.toLocaleString()}</td>
+                          <td data-title="Amount:">
+                            {amount10.toLocaleString()}
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row"></th>
+                          <th scope="row" className="th_row"></th>
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td className="total">{sum.toLocaleString()}</td>
+                          <td className="total" data-title="Total:">
+                            {sum.toLocaleString()}
+                          </td>
                         </tr>
                       </tbody>
                     </table>
