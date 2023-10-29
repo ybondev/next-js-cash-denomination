@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700&display=swap%27");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home_section {
+  height: 100dvh;
+}
+
+.home_section .row {
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_section .card-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home_section thead th {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.home_section tbody .total {
+  font-weight: bold;
+}
+
+.home_section .coins {
+  position: relative;
+}
+
+.home_section span {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  color: darkgray;
+}
