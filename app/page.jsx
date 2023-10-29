@@ -90,7 +90,7 @@ const page = () => {
             <div className="col-md-8">
               <div className="card">
                 <div className="card-body">
-                  <div className="card-title">fv balete</div>
+                  <div className="card-title">fv balete cash denomination</div>
                   <div className="table-responsive">
                     <table className="table table-striped">
                       <thead>
@@ -360,7 +360,7 @@ const page = () => {
                           <td></td>
                           <td></td>
                           <td className="total" data-title="Total:">
-                            {sum.toLocaleString()}
+                            PHP {sum.toLocaleString()}
                           </td>
                         </tr>
                       </tbody>
