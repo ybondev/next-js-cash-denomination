@@ -69,4 +69,9 @@
     content: attr(data-title) "";
     float: left;
   }
+
+  input {
+    width: 100%;
+    max-width: 150px;
+  }
 }
